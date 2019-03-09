@@ -13,9 +13,29 @@ module.exports = function(app){
         });
     });
 
-    app.post("/api/team")
+    app.post("/api/team", function(req, res){
+        db.Team.create({
+            name: req.body.name
+        }).then(function(dbTeam){
+            res.json(dbTeam);
+        }).catch(function(err){
+            res.json(err);
+        });
+    })
 
-    app.post("/api/Pokemon")
+    app.post("/api/Pokemon", function(req, res){
+        db.Pokemon.create({
+            pokemonName:req.body.name,
+            types:req.body.types,
+            moves:req.body.moves,
+            species:req.body.species,
+            sprites:req.body.sprites
+        },).then(function(dbPokemon){
+            res.json(dbPokemon);
+        }).catch(function(err){
+            res.json(err);
+        });
+    })
 
     app.put("/api/team", function(req, res){
         db.Team.create({
