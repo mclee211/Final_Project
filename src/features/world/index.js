@@ -13,8 +13,8 @@ function World(props) {
         <div
             style={{
                 position: 'relative',
-                width: '640px',
-                height: '320px',
+                width: '1280px',
+                height: '640px',
                 margin: '20px auto'
             }}
         >

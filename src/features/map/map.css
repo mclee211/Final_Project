@@ -7,6 +7,11 @@
     height: 32px;
 }
 
+.path {
+    background-image: url('/tiles/path.png')
+
+}
+
 .ground {
     background-image: url('/tiles/ground.png')
 

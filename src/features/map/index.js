@@ -8,6 +8,8 @@ function getTileSprite(type) {
     switch(type) {
         case 0:
             return 'ground'
+        case 1:
+            return 'path'
         case 5:
             return 'barrier'
         case 6:
@@ -39,8 +41,8 @@ function Map(props) {
                 position: 'relative',
                 top: '0px',
                 left: '0px',
-                width: '640px',
-                height: '320px'
+                width: '1280px',
+                height: '640px'
             }}
         >
 
